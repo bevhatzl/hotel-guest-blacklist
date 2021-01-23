@@ -8,7 +8,7 @@ const PWD = process.env.DB_PASS;
 const USERID = process.env.DB_USER;
 
   mongoose.connect(
-    process.env.MONGODB_URI || "mongodb+srv://${USERID}:${PWD}@cluster0.fqf9a.mongodb.net/hotelguestblacklist?retryWrites=true&w=majority",
+    process.env.MONGODB_URI || `mongodb+srv://${USERID}:${PWD}@cluster0.fqf9a.mongodb.net/hotelguestblacklist?retryWrites=true&w=majority`,
     { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
   );
 
